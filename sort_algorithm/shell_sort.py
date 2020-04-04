@@ -34,13 +34,10 @@ def shell_sort(arr):
 def random_sequence(n):
     org_list = list(range(n))
     random_list = []
-    random_count = n
     for i in range(n):
-        pos = random.randint(0, random_count - 1)
-        curose = org_list[pos]
-        org_list.pop(pos)
+        curose = random.choice(org_list)
+        org_list.remove(curose)
         random_list.append(curose)
-        random_count -= 1
     return random_list
 
 
