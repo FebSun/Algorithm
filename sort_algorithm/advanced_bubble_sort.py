@@ -13,14 +13,12 @@
 def advanced_bubble_sort(arr):
     length = len(arr)
     for i in range(length-1):
-        count = 0
+        flag = True
         for j in range(length-1):
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
-                count += 1
-        print(count)
-        if count == 0:
-            print(i)
+                flag = False
+        if flag:
             break
     return arr
 
